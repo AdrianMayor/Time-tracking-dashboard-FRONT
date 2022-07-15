@@ -6,30 +6,36 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: white;  
+    transition: ease all .3s;
 }
 
 html {
-font-family: 'Rubik', sans-serif;
-    
-color: white;
-    
---Blue: hsl(246, 80%, 60%);
-    
---work: hsl(15, 100%, 70%);
---play: hsl(195, 74%, 62%);
---study: hsl(348, 100%, 68%);
---exercise: hsl(145, 58%, 55%);
---social: hsl(264, 64%, 52%);
---selfCare: hsl(43, 84%, 65%);
+    font-family: 'Rubik', sans-serif;
+        
+    --Blue: hsl(246, 80%, 60%);
+        
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --selfCare: hsl(43, 84%, 65%);
 
---mainColor: hsl(235, 46%, 20%);
---mainColor2: hsl(235, 45%, 61%);
---mainColor3: hsl(236, 100%, 87%);
---hoverColor: hsl(228, 45%, 44%);
+    --mainColor: hsl(235, 46%, 20%);
+    --mainColor2: hsl(235, 45%, 61%);
+    --mainColor3: hsl(236, 100%, 87%);
+    --hoverColor: hsl(228, 45%, 44%);
 }
 
 body{
     background-color:hsl(226, 43%, 10%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
 }
 
 main {
@@ -37,7 +43,7 @@ main {
     justify-content: center;
     grid-template-rows: 200px repeat(6, 148px);
     gap: 1.2rem;
-    padding: 4rem 1.2rem;
+    padding: 1rem;
 }
 
 
@@ -64,7 +70,6 @@ button {
 }
 
 button img {
-    
     padding: .2rem;
 }
 
@@ -253,9 +258,11 @@ button:hover {
 }
 
 
+
 /* ---------- DESKTOP ---------- */
 
-@media (min-width:541px){
+@media only screen and (min-width:620px){
+
 
     main {
         display: grid;
@@ -263,7 +270,9 @@ button:hover {
         grid-template-rows: repeat(2,minmax(190px,225px));
         grid-template-areas: "aside work play study"
                 "aside exercise social selfCare";
-        min-height: 100vh;
+        /* min-height: 100vh; */
+        height: 100%;
+        width: 100%;
         align-content: center;
     }
 
@@ -340,12 +349,14 @@ button:hover {
 
     .timeCard__info--pastTime {
         position: absolute;
-        bottom: 25px;
+        bottom: 33px;
         left: 25px;
     }
 
     .timeCard__info--time {
-        font-size: 3.1rem;
+        font-size: clamp(2.8rem, 6vw, 3.1rem); 
+        position: absolute;
+        bottom: 58px;
     }
 
     .timeCard__hours {
@@ -354,6 +365,7 @@ button:hover {
     }
 
 }
+
 
 /* ----- EVENTS ----- */
 
