@@ -12,8 +12,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 Application to control the time spent on various activities. This project has helped me develop a little more my design skills and expanded my knowledge of DOM
@@ -28,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.JPG)
 
 ### Links
 
