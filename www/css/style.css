@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+font-family: 'Rubik', sans-serif;
+    
+color: white;
+    
+--Blue: hsl(246, 80%, 60%);
+    
+--work: hsl(15, 100%, 70%);
+--play: hsl(195, 74%, 62%);
+--study: hsl(348, 100%, 68%);
+--exercise: hsl(145, 58%, 55%);
+--social: hsl(264, 64%, 52%);
+--selfCare: hsl(43, 84%, 65%);
+
+--mainColor: hsl(235, 46%, 20%);
+--mainColor2: hsl(235, 45%, 61%);
+--mainColor3: hsl(236, 100%, 87%);
+--hoverColor: hsl(228, 45%, 44%);
+}
+
+body{
+    background-color:hsl(226, 43%, 10%);
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 200px repeat(6, 148px);
+    gap: 1.2rem;
+    padding: 4rem 1.2rem;
+}
+
+
+
+/* ---------- MOBILE FIRST ---------- */
+/* ------ CARDS ------ */
+
+.card {
+    border-radius: 15px;
+    background-color: var(--mainColor);
+    position: relative;
+
+    overflow: hidden;
+}
+
+.card__info {
+    border-radius: 15px;
+
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+button img {
+    
+    padding: .2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* --- USER CARD --- */
+
+
+.userCard__header{
+    padding:0.9rem 0rem;
+    border-radius: 15px;
+    min-height: 130px;
+
+    background-color:var(--Blue);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    padding: .2rem;
+}
+
+
+.userCard__info p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: .15rem;
+    margin-bottom: .4rem;
+}
+
+.userCard__img {
+    width: 20%;
+    border-radius: 100%;
+    border: 3px solid white;
+}
+
+.userCard__info--name {
+    font-weight: 300;
+    font-size:2rem ;
+}
+
+.userContentCard__timeSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+}
+
+.userContentCard__timeSelect menu {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--mainColor3);
+    font-weight: 300;
+    width: 100%;
+
+}
+
+
+
+.userContentCard__timeSelect menu li{
+    transition: 0.2s;
+}
+
+.userContentCard__timeSelect menu li:hover{
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* --- TIME CARDS --- */
+
+
+.timeCard__header {
+    height:50%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+ 
+}
+
+.timeCard__info {
+    background-color: var(--mainColor);
+    height: 76%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: ease-in-out .1s;
+}
+
+.timeCard__info:hover {
+    cursor: pointer;
+    background-color: var(--hoverColor);
+    transition: ease-in-out .1s;
+}
+
+.timeCard__hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timeCard__info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: flex-end;
+}
+
+.timeCard__img {
+    position: absolute;
+    right: 15px;
+    top: -11px;
+}
+
+
+.timeCard__hours p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+.timeCard__info--time{
+    font-weight: 300;
+    font-size: 1.9rem;
+
+    opacity: 0;
+    transition: opacity 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.timeCard__info--pastTime {
+    color: var(--mainColor3);
+    font-size:.8rem ;
+    font-weight: 300;
+
+    opacity: 0;
+    transition: opacity 225ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* - WORK CARD - */
+
+.workCard__header {
+ background-color: var(--work);
+}
+
+/* - PLAY CARD - */
+
+.playCard__header {
+    background-color: var(--play);
+}
+
+/* - STUDY CARD - */
+
+.studyCard__header {
+    background-color: var(--study);
+}
+
+/* - EXERCISE CARD - */
+
+.exerciseCard__header {
+    background-color: var(--exercise);
+}
+
+/* - SOCIAL CARD */
+
+.socialCard__header {
+    background-color: var(--social);
+}
+
+/* - SELF CARE CARD */
+
+.selfCareCard__header {
+    background-color: var(--selfCare);
+}
+
+
+/* ---------- DESKTOP ---------- */
+
+@media (min-width:541px){
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(140px,225px));
+        grid-template-rows: repeat(2,minmax(190px,225px));
+        grid-template-areas: "aside work play study"
+                "aside exercise social selfCare";
+        min-height: 100vh;
+        align-content: center;
+    }
+
+     .userCard {
+        grid-area: aside;
+    }
+
+    .workCard {
+        grid-area: work;
+    }
+
+    .playCard {
+        grid-area: play;
+    }
+
+    .studyCard {
+        grid-area: study;
+    }
+
+    .exerciseCard {
+        grid-area: exercise;
+    }
+
+    .socialCard {
+        grid-area: social;
+    }
+
+    .selfCareCard {
+        grid-area: selfCare;
+    } 
+    
+    /* --- USER CARD --- */
+    .userCard__header{
+        min-height: 330px;
+        
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.2rem 1.5rem;
+        gap: 4rem;
+    }
+    
+    .userCard__img {
+        min-width: 5rem;
+    }
+
+
+
+    .userCard__info--name {
+        font-weight: 300;
+        font-size:1.8rem ;
+    }
+
+    .userContentCard__timeSelect {
+        height: 30%;
+    }
+
+    .userContentCard__timeSelect menu {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        padding: 0 1.3rem;
+        gap: 0;
+    }
+
+    /* --- TIME CARDS --- */
+
+
+    .timeCard__info {
+        height: 82%;
+    }
+
+    .timeCard__info--pastTime {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .timeCard__info--time {
+        font-size: 3.1rem;
+    }
+
+    .timeCard__hours {
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+
+}
+
+/* ----- EVENTS ----- */
+
+.selected {
+    color: white;
+    font-weight: 500;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.notHover:hover{
+    background-color:inherit;
+}
