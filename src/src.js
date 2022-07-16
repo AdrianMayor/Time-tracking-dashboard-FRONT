@@ -12,14 +12,17 @@ const threeDots = document.querySelectorAll("button");
 
 // Get JSON data
 async function getData() {
-  //const response = await fetch("./src/data.json");
-  const response = await fetch(
-    "https://adrianmayor.github.io/Time-tracking-dashboard/src/data.json"
-  );
+  try {
+    const response = await fetch(
+      "https://adrianmayor.github.io/Time-tracking-dashboard/src/data.json"
+    );
 
-  const data = await response.json();
+    const data = await response.json();
 
-  return data;
+    return data;
+  } catch (err) {
+    console.error("Something went wrong", err);
+  }
 }
 
 // Adding triggers events to buttons | To time selector button | To hover visual card design
