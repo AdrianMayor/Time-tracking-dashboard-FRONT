@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.JPG)
+![](./assets/docs/screenshot.jpg)
 
 ### Links
 
