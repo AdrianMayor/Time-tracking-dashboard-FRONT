@@ -12,7 +12,7 @@ const threeDots = document.querySelectorAll("button");
 
 // Get JSON data
 async function getData() {
-  const response = await fetch("../../data.json");
+  const response = await fetch("../data.json");
 
   const data = await response.json();
 
