@@ -1,0 +1,40 @@
+{
+  "name": "time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "db": "node ./database/initDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianMayor/Time-tracking-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianMayor/Time-tracking-dashboard/issues"
+  },
+  "homepage": "https://github.com/AdrianMayor/Time-tracking-dashboard#readme",
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sharp": "^0.30.7",
+    "uuid": "^8.3.2"
+  }
+}
