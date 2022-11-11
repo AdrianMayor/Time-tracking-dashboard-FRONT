@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL (just front version): [Click me](https://adrianmayor.github.io/Time-tracking-dashboard/)
+- Live Site URL (just front version): [Click me](https://time-tracking-dashboard-rb0dw3543-adrianmayor.vercel.app/)
 
 ## My process
 
